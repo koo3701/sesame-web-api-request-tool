@@ -4,6 +4,7 @@
   "main": "build/index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "eslint": "^8.2.0",
@@ -16,6 +17,11 @@
     "build:live": "nodemon --watch 'src/**/*.ts' --exec 'yarn run eslint ./src && ts-node' src/index.ts",
     "serve": "yarn build; node build/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node-aes-cmac": "^0.1.1"
+  },
   "private": true
 }
