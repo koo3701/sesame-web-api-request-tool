@@ -1,0 +1,21 @@
+{
+  "name": "node-typescript-boilerplate",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "eslint-config-google": "^0.14.0",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "start": "yarn build:live",
+    "build": "yarn run eslint ./src && tsc",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'yarn run eslint ./src && ts-node' src/index.ts",
+    "serve": "yarn build; node build/index.js"
+  },
+  "dependencies": {},
+  "private": true
+}
