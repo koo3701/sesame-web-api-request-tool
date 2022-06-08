@@ -15,7 +15,8 @@
     "start": "yarn build:live",
     "build": "yarn run eslint ./src && tsc",
     "build:live": "nodemon --watch 'src/**/*.ts' --exec 'yarn run eslint ./src && ts-node' src/index.ts",
-    "serve": "yarn build; node build/index.js"
+    "serve": "yarn build; node build/index.js",
+    "create-url": "ts-node src/url_creater.ts"
   },
   "dependencies": {
     "axios": "^0.24.0",
